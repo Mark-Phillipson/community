@@ -178,6 +178,7 @@ code_formatter_names = {
     "dunder": "DOUBLE_UNDERSCORE",
     "hammer": "PUBLIC_CAMEL_CASE",
     "kebab": "DASH_SEPARATED",
+    "variable": "PUBLIC_CAMEL_CASE",
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
     "slasher": "SLASH_SEPARATED",
