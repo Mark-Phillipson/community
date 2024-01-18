@@ -1,4 +1,6 @@
 settings():
+# how long a pause talon waits before deciding you've finished speaking Default: 0.150 (150 milliseconds)
+    speech.timeout= 0.160
     # Adjust the scale of the imgui to my liking
     imgui.scale = 1.3
 
