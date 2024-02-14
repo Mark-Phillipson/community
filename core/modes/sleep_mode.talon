@@ -35,4 +35,10 @@ settings():
     user.history_enable()
     user.talon_mode()
 
-^(talon wake)+$: speech.enable()
+^(talon wake)+$:
+    speech.enable()
+
+^(stop)+$:
+    key(super-h)
+    speech.enable()
+    key("ctrl-shift-left")
