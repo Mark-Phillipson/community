@@ -4,8 +4,8 @@ settings():
     # Adjust the scale of the imgui to my liking
     imgui.scale = 1.3
 
-    # If `true`, automatically show the picker GUI when the file manager has focus
-    user.file_manager_auto_show_pickers = false
+    # Enable if you'd like the picker gui to automatically appear when explorer has focus
+    user.file_manager_auto_show_pickers = 0
 
     # Set the number of command lines to display per help page
     user.help_max_command_lines_per_page = 50
@@ -40,8 +40,8 @@ settings():
     # Set the amount to scroll left/right
     user.mouse_wheel_horizontal_amount = 40
 
-    # If `true`, start mouse grid numbering on the bottom left (vs. top left)
-    user.grids_put_one_bottom_left = true
+    # Mouse grid and friends put the number one on the bottom left (vs on the top left)
+    user.grids_put_one_bottom_left = 1
 
     # Set the default number of command history lines to display
     user.command_history_display = 10
