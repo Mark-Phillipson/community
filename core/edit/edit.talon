@@ -18,8 +18,8 @@ go word right: edit.word_right()
 
 go left: edit.left()
 go right: edit.right()
-go up: edit.up()
-go down: edit.down()
+(go up) | (north): edit.up()
+(go down) | (south): edit.down()
 
 go line start | head: edit.line_start()
 go line end | tail: edit.line_end()
@@ -31,8 +31,8 @@ go way right: edit.line_end()
 go way up: edit.file_start()
 go way down: edit.file_end()
 
-go top: edit.file_start()
-go bottom: edit.file_end()
+go [to] top: edit.file_start()
+go [to] bottom: edit.file_end()
 
 go page up: edit.page_up()
 go page down: edit.page_down()
@@ -183,5 +183,5 @@ undo that: edit.undo()
 redo that: edit.redo()
 
 # Save
-file save: edit.save()
+(file save) | (disk): edit.save()
 file save all: edit.save_all()

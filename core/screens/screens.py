@@ -60,11 +60,11 @@ def show_screen_number(screen: ui.Screen, number: int):
         y = c.y + c.height / 2 + rect.height / 2
 
         c.paint.style = c.paint.Style.FILL
-        c.paint.color = "eeeeee"
+        c.paint.color = "000000"
         c.draw_text(text, x, y)
 
         c.paint.style = c.paint.Style.STROKE
-        c.paint.color = "000000"
+        c.paint.color = "eeeeee"
         c.draw_text(text, x, y)
 
         cron.after("3s", canvas.close)
