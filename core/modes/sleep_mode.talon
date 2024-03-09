@@ -37,8 +37,3 @@ settings():
 
 ^(talon wake)+$:
     speech.enable()
-
-^(stop)+$:
-    key(super-h)
-    speech.enable()
-    key("ctrl-shift-left")
