@@ -3,12 +3,12 @@ settings():
     speech.timeout = 0.4
     # Adjust the scale of the imgui to my liking
     imgui.scale = 1.3
-
+    imgui.dark_mode = true
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
-    user.file_manager_auto_show_pickers = 1
+    user.file_manager_auto_show_pickers = 0
 
     # Set the number of command lines to display per help page
-    user.help_max_command_lines_per_page = 50
+    user.help_max_command_lines_per_page = 40
 
     # Set the number of contexts to display per help page
     user.help_max_contexts_per_page = 20
@@ -23,7 +23,7 @@ settings():
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 1
+    user.mouse_enable_pop_click = 0
 
     # If `true`, use a hissing noise to scroll continuously
     user.mouse_enable_hiss_scroll = false
@@ -38,7 +38,7 @@ settings():
     user.mouse_wheel_down_amount = 120
 
     # Set the amount to scroll left/right
-    user.mouse_wheel_horizontal_amount = 40
+    user.mouse_wheel_horizontal_amount = 60
 
     # Mouse grid and friends put the number one on the bottom left (vs on the top left)
     user.grids_put_one_bottom_left = 0
