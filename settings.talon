@@ -3,6 +3,7 @@ settings():
     speech.timeout = 0.160
     # Adjust the scale of the imgui to my liking
     imgui.scale = 1.3
+    #Stop blinding me
     imgui.dark_mode = true
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
@@ -23,7 +24,7 @@ settings():
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 0
+    user.mouse_enable_pop_click = 2
 
     # If `true`, use a hissing noise to scroll continuously
     user.mouse_enable_hiss_scroll = false

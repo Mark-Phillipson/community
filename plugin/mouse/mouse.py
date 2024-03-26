@@ -92,14 +92,14 @@ mod.setting(
 mod.setting(
     "mouse_wheel_horizontal_amount",
     type=int,
-    default=40,
+    default=80,
     desc="The amount to scroll left/right",
 )
 
 continuous_scroll_mode = ""
 
 
-@imgui.open(x=700, y=0)
+@imgui.open(x=2200, y=0)
 def gui_wheel(gui: imgui.GUI):
     gui.text(f"Scroll mode: {continuous_scroll_mode}")
     gui.line()
@@ -227,7 +227,7 @@ class Actions:
     def mouse_move_center_active_window():
         """move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-        ctrl.mouse_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
+        ctrl.moushe_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
 
     def hiss_scroll_up():
         """Change mouse hiss scroll direction to up"""
