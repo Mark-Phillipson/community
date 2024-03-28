@@ -30,8 +30,8 @@ Usages:
 
     new command:
         # perform command
-
     # myfile.py - demonstrate action deprecation
+
     from talon import actions
 
     @mod.action_class
@@ -136,7 +136,7 @@ class Actions:
             f'The "{name}" command is deprecated. Instead, say: "{replacement}".'
             f" See log for more."
         )
-        actions.app.notify(msg, "Deprecation warning")
+        #actions.app.notify(msg, "Deprecation warning")
         msg = (
             f'The "{name}" command is deprecated since {time_deprecated}.'
             f' Instead, say: "{replacement}".'
