@@ -6,18 +6,18 @@ settings():
     # Center horizontally
     user.mode_indicator_x = 0.5
     # Align top
-    user.mode_indicator_y = 0
+    user.mode_indicator_y = 0.9
     # Slightly transparent
-    user.mode_indicator_color_alpha = 0.75
+    user.mode_indicator_color_alpha = 1
     # Grey gradient
-    user.mode_indicator_color_gradient = 0.5
+    user.mode_indicator_color_gradient = 1
     # Grey color for sleep mode
-    user.mode_indicator_color_sleep = "808080"
+    user.mode_indicator_color_sleep = "e3372e"
     # Gold color for dictation mode
-    user.mode_indicator_color_dictation = "ffd700"
+    user.mode_indicator_color_dictation = "e62b86"
     # MediumSeaGreen color for mixed mode
     user.mode_indicator_color_mixed = "3cb371"
     # CornflowerBlue color for command mode
-    user.mode_indicator_color_command = "6495ed"
+    user.mode_indicator_color_command = "00a54e"
     # GhostWhite color for other modes
     user.mode_indicator_color_other = "f8f8ff"
