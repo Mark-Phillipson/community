@@ -185,5 +185,5 @@ def on_ready():
     registry.register("update_settings", on_update_settings)
     ui.register("screen_change", lambda _: update_indicator)
 
-
 app.register("ready", on_ready)
+
