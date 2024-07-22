@@ -11,6 +11,8 @@ settings():
     user.mode_indicator_color_alpha = 1
     # Grey gradient
     user.mode_indicator_color_gradient = 1
+    # Black color for when the microphone is muted (set to "None")
+    user.mode_indicator_color_mute = "000000"
     # Grey color for sleep mode
     user.mode_indicator_color_sleep = "e3372e"
     # Gold color for dictation mode
