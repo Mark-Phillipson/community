@@ -63,7 +63,7 @@ settings():
 
     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
     # the clipboard. This is often faster than typing.
-    # user.paste_to_insert_threshold = 10
+    user.paste_to_insert_threshold = 10
 
     # Uncomment to enable context-sensitive dictation. This determines how to format
     # (capitalize, space) dictation-mode speech by selecting & copying surrounding text
@@ -78,7 +78,7 @@ settings():
     # user.window_snap_screen = "size aware"
 
     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
-    # user.listening_timeout_minutes = 3
+    user.listening_timeout_minutes = 3
 
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
@@ -88,4 +88,4 @@ settings():
 # By default saying "one" would write "1", however many users find this behavior
 # prone to false positives. If you uncomment this, you will need to say
 # "numb one" to write "1". Note that this tag will eventually be activated by default
-# tag(): user.prefixed_numbers
+tag(): user.prefixed_numbers
