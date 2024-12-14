@@ -119,26 +119,6 @@ class UserActions:
 
     # find.py support begin
 
-<<<<<<< HEAD
-    def find(text: str):
-        """Triggers find in current editor"""
-
-        actions.key("ctrl-f")
-        if text:
-            actions.insert(text)
-
-    def find_next():
-        actions.key("enter")
-
-    def find_previous():
-        actions.key("shift-enter")
-
-    # find.py support end
-
-    # find_and_replace.py support begin
-
-=======
->>>>>>> main
     def find_everywhere(text: str):
         """Triggers find across project"""
         actions.key("ctrl-h")
