@@ -11,6 +11,7 @@ language_extensions = {
     # 'cmake': 'cmake',
     # 'cplusplus': 'cpp hpp',
     "csharp": "cs",
+    "aspnetcorerazor": "razor cshtml",
     "css": "css",
     # 'elisp': 'el',
     # 'elm': 'elm',
