@@ -1,4 +1,4 @@
-from talon import Context, Module, actions
+from talon import Context, Module, actions, app
 
 # Maps language mode names to the extensions that activate them. Only put things
 # here which have a supported language mode; that's why there are so many
@@ -60,9 +60,9 @@ language_name_overrides = {
     "r": ["are language"],
     "tex": ["tech", "lay tech", "latex"],
 }
+from .code_languages import code_languages, code_special_file_map
 
 mod = Module()
-
 ctx = Context()
 
 ctx_forced = Context()
@@ -74,27 +74,29 @@ tag: user.code_language_forced
 mod.tag("code_language_forced", "This tag is active when a language mode is forced")
 mod.list("language_mode", desc="Name of a programming language mode.")
 
-ctx.lists["self.language_mode"] = {
-    name: language
-    for language in language_extensions
-    for name in language_name_overrides.get(language, [language])
+# Maps spoken forms to language ids
+ctx.lists["user.language_mode"] = {
+    spoken_form: language.id
+    for language in code_languages
+    for spoken_form in language.spoken_forms
 }
 
-# Maps extension to languages.
+# Maps extension to language ids
 extension_lang_map = {
-    "." + ext: language
-    for language, extensions in language_extensions.items()
-    for ext in extensions.split()
+    f".{ext}": lang.id for lang in code_languages for ext in lang.extensions
 }
 
-language_ids = set(language_extensions.keys())
-
+language_ids = {lang.id for lang in code_languages}
 forced_language = ""
 
 
 @ctx.action_class("code")
 class CodeActions:
     def language():
+        file_name = actions.win.filename()
+        if file_name in code_special_file_map:
+            return code_special_file_map[file_name]
+
         file_extension = actions.win.file_ext()
         return extension_lang_map.get(file_extension, "")
 
@@ -110,7 +112,7 @@ class Actions:
     def code_set_language_mode(language: str):
         """Sets the active language mode, and disables extension matching"""
         global forced_language
-        assert language in language_extensions
+        assert language in language_ids
         forced_language = language
         # Update tags to force a context refresh. Otherwise `code.language` will not update.
         # Necessary to first set an empty list otherwise you can't move from one forced language to another.
@@ -122,3 +124,10 @@ class Actions:
         global forced_language
         forced_language = ""
         ctx.tags = []
+
+    def code_show_forced_language_mode():
+        """Show the active language for this context"""
+        if forced_language:
+            app.notify(f"Forced language: {forced_language}")
+        else:
+            app.notify("No language forced")

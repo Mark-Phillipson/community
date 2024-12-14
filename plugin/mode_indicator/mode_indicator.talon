@@ -3,14 +3,14 @@ settings():
     user.mode_indicator_show = 1
     # 30pixels diameter
     user.mode_indicator_size = 30
-    # Center horizontally
+    # Center horizontally. (0=left, 0.5=center, 1=right)
     user.mode_indicator_x = 0.5
-    # Align top
-    user.mode_indicator_y = 0.9
+    # Align top. (0=top, 0.5=center, 1=bottom)
+    user.mode_indicator_y = 0
     # Slightly transparent
     user.mode_indicator_color_alpha = 1
     # Grey gradient
-    user.mode_indicator_color_gradient = 1
+    user.mode_indicator_color_gradient = 0.5
     # Black color for when the microphone is muted (set to "None")
     user.mode_indicator_color_mute = "000000"
     # Grey color for sleep mode

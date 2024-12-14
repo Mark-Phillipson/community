@@ -1,3 +1,7 @@
+# Compound of action(select, clear, copy, cut, paste, etc.) and modifier(word, line, etc.) commands for editing text.
+# eg: "select line", "clear all"
+<user.edit_action> <user.edit_modifier>: user.edit_command(edit_action, edit_modifier)
+
 # Zoom
 zoom in: edit.zoom_in()
 zoom out: edit.zoom_out()
@@ -18,8 +22,11 @@ go word right: edit.word_right()
 
 go left: edit.left()
 go right: edit.right()
-(go up) | (north): edit.up()
-(go down) | (south): edit.down()
+go north: edit.up()
+go south: edit.down()
+# go left, go left left down, go 5 left 2 down
+# go word left, go 2 words right
+go <user.navigation_step>+: user.perform_navigation_steps(navigation_step_list)
 
 go line start | head: edit.line_start()
 go line end | tail: edit.line_end()
@@ -38,36 +45,36 @@ go page up: edit.page_up()
 go page down: edit.page_down()
 
 # Selecting
+<<<<<<< HEAD
 select all: edit.select_all()
 select line: edit.select_line()
 select line start: user.select_line_start()
 select line end: user.select_line_end()
 select block: edit.select_paragraph()
+=======
+>>>>>>> main
 
 select left: edit.extend_left()
 select right: edit.extend_right()
 select up: edit.extend_line_up()
 select down: edit.extend_line_down()
 
-select word: edit.select_word()
 select word left: edit.extend_word_left()
 select word right: edit.extend_word_right()
-
-select way left: edit.extend_line_start()
-select way right: edit.extend_line_end()
-select way up: edit.extend_file_start()
-select way down: edit.extend_file_end()
 
 # Indentation
 indent [more]: edit.indent_more()
 (indent less | out dent): edit.indent_less()
 
 # Delete
+<<<<<<< HEAD
 clear all: user.delete_all()
 clear line: edit.delete_line()
 clear line start: user.delete_line_start()
 clear line end: user.delete_line_end()
 clear block: edit.delete_paragraph()
+=======
+>>>>>>> main
 clear left: edit.delete()
 clear right: user.delete_right()
 
@@ -79,8 +86,6 @@ clear down:
     edit.extend_line_down()
     edit.delete()
 
-clear word: edit.delete_word()
-
 clear word left:
     edit.extend_word_left()
     edit.delete()
@@ -89,30 +94,17 @@ clear word right:
     edit.extend_word_right()
     edit.delete()
 
-clear way left:
-    edit.extend_line_start()
-    edit.delete()
-
-clear way right:
-    edit.extend_line_end()
-    edit.delete()
-
-clear way up:
-    edit.extend_file_start()
-    edit.delete()
-
-clear way down:
-    edit.extend_file_end()
-    edit.delete()
-
 # Copy
 copy that: edit.copy()
+<<<<<<< HEAD
 copy all: user.copy_all()
 copy line: user.copy_line()
 copy line start: user.copy_line_start()
 copy line end: user.copy_line_end()
 copy block: user.copy_paragraph()
 copy word: user.copy_word()
+=======
+>>>>>>> main
 copy word left: user.copy_word_left()
 copy word right: user.copy_word_right()
 
@@ -132,12 +124,15 @@ copy word right: user.copy_word_right()
 
 # Cut
 cut that: edit.cut()
+<<<<<<< HEAD
 cut all: user.cut_all()
 cut line: user.cut_line()
 cut line start: user.cut_line_start()
 cut line end: user.cut_line_end()
 cut block: user.cut_paragraph()
 cut word: user.cut_word()
+=======
+>>>>>>> main
 cut word left: user.cut_word_left()
 cut word right: user.cut_word_right()
 
@@ -161,12 +156,15 @@ cut word right: user.cut_word_right()
     edit.paste()
     key(enter)
 paste match: edit.paste_match_style()
+<<<<<<< HEAD
 (pace | paste) [to] all: user.paste_all()
 (pace | paste) [to] line: user.paste_line()
 (pace | paste) [to] line start: user.paste_line_start()
 (pace | paste) [to] line end: user.paste_line_end()
 (pace | paste) [to] block: user.paste_paragraph()
 (pace | paste) [to] word: user.paste_word()
+=======
+>>>>>>> main
 
 # Duplication
 clone that: edit.selection_clone()
@@ -177,7 +175,7 @@ new line above: edit.line_insert_up()
 new line below | slap: edit.line_insert_down()
 
 # Insert padding with optional symbols
-(pad | padding): user.insert_between(" ", " ")
+padding: user.insert_between(" ", " ")
 (pad | padding) <user.symbol_key>+:
     insert(" ")
     user.insert_many(symbol_key_list)
