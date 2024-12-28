@@ -169,8 +169,8 @@ class UserActions:
 def mouse_scroll_continuous(new_scroll_dir: Literal[-1, 1]):
     global scroll_job, scroll_dir, scroll_start_ts, continuous_scroll_mode
 
-    if eye_zoom_mouse.zoom_mouse.state != eye_zoom_mouse.STATE_IDLE:
-        return
+    #if eye_zoom_mouse.zoom_mouse.state != eye_zoom_mouse.STATE_IDLE:
+    #    return
 
     if scroll_job:
         # Issuing a scroll in the same direction aborts scrolling

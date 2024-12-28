@@ -95,3 +95,8 @@ settings():
 # prone to false positives. If you uncomment this, you will need to say
 # "numb one" to write "1". Note that this tag will eventually be activated by default
 # tag(): user.prefixed_numbers
+
+    #user.tracking.zoom_width = 1000
+    #user.tracking.zoom_height = 100
+    #user.tracking.zoom_scale = 4
+    #These do not appear to be working, so I have commented them out for now.
