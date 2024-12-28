@@ -22,7 +22,7 @@ settings():
     # user.help_sort_contexts_by_specificity = false
 
     # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 80
+    user.mouse_continuous_scroll_amount = 60
 
 #     # Set the number of contexts to display per help page
 #     user.help_max_contexts_per_page = 20
@@ -31,7 +31,7 @@ settings():
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 2
+    user.mouse_enable_pop_click = 1
 
 #     # Set the scroll amount for continuous scroll/gaze scroll
 #     user.mouse_continuous_scroll_amount = 80
@@ -84,4 +84,4 @@ settings():
 # By default saying "one" would write "1", however many users find this behavior
 # prone to false positives. If you uncomment this, you will need to say
 # "numb one" to write "1". Note that this tag will eventually be activated by default
-tag(): user.prefixed_numbers
+# tag(): user.prefixed_numbers
