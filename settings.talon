@@ -33,8 +33,8 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 1
 
-#     # Set the scroll amount for continuous scroll/gaze scroll
-#     user.mouse_continuous_scroll_amount = 80
+    # Set the scroll amount for continuous scroll/gaze scroll
+    user.mouse_continuous_scroll_amount = 8
 
 #     # If `true`, stop continuous scroll/gaze scroll with a pop
 #     user.mouse_enable_pop_stops_scroll = true
