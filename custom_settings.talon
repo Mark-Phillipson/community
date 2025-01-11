@@ -62,7 +62,7 @@ settings():
 
     # Uncomment to add a directory (relative to the Talon user dir) with additional
     # .snippet files. Changing this setting requires a restart of Talon.
-    user.snippets_dir = "C:\Users\MPhil\AppData\Roaming\Code\User\snippets"
+    # user.snippets_dir = "C:\Users\MPhil\AppData\Roaming\Code\User\snippets"
 
     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
     # the clipboard. This is often faster than typing.
@@ -88,7 +88,7 @@ settings():
 
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
-    tag(): user.mouse_cursor_commands_enable
+#    tag(): user.mouse_cursor_commands_enable
 
 # Uncomment the below to disable support for saying numbers without a prefix.
 # By default saying "one" would write "1", however many users find this behavior
