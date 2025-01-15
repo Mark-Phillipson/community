@@ -22,7 +22,7 @@ settings():
     # user.help_sort_contexts_by_specificity = false
 
     # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 40
+    user.mouse_continuous_scroll_amount = 10
 
 #     # Set the number of contexts to display per help page
 #     user.help_max_contexts_per_page = 20
@@ -34,7 +34,7 @@ settings():
     user.mouse_enable_pop_click = 1
 
     # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 8
+    user.mouse_continuous_scroll_amount = 4
 
 #     # If `true`, stop continuous scroll/gaze scroll with a pop
 #     user.mouse_enable_pop_stops_scroll = true
