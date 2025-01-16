@@ -1,5 +1,6 @@
 list: user.emoji
 -
+
 angry: 😠
 blushing: 😊
 broken heart: 💔
@@ -28,3 +29,5 @@ thinking: 🤔
 thumbs down: 👎
 thumbs up: 👍
 worried: 😟
+writing: ✍
+yawning: 🥱
