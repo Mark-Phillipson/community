@@ -7,10 +7,6 @@ settings():
     imgui.dark_mode = true
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
-    #Stop blinding me
-    imgui.dark_mode = true
-    # Enable if you'd like the picker gui to automatically appear when explorer has focus
-    user.file_manager_auto_show_pickers = 0
 
     # Set the number of command lines to display per help page
     user.help_max_command_lines_per_page = 40
