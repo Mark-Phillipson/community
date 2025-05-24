@@ -32,8 +32,14 @@ settings():
     # Set the scroll amount for continuous scroll/gaze scroll
     user.mouse_continuous_scroll_amount = 4
 
-#     # If `true`, stop continuous scroll/gaze scroll with a pop
-#     user.mouse_enable_pop_stops_scroll = true
+    # Set the scroll multiplier for gaze scroll
+    user.mouse_gaze_scroll_speed_multiplier = 1.0
+
+    # Set the maximum acceleration factor when scrolling continuously. 1=constant speed/no acceleration.
+    user.mouse_continuous_scroll_acceleration = 1
+
+    # If `true`, stop continuous scroll/gaze scroll with a pop
+    user.mouse_enable_pop_stops_scroll = true
 
 #     # If `true`, stop mouse drag with a pop
 #     user.mouse_enable_pop_stops_drag = true
@@ -46,6 +52,12 @@ settings():
 
     # Set the amount to scroll left/right
     user.mouse_wheel_horizontal_amount = 60
+    # If `true`, use a hissing noise to scroll continuously
+    user.mouse_enable_hiss_scroll = false
+
+    # How much time a hiss must last for to be considered a hiss rather than
+    # part of speech, in ms
+    user.hiss_scroll_debounce_time = 100
 
 #     # If `true`, hide the continuous scroll/gaze scroll GUI
 #     user.mouse_hide_mouse_gui = false
@@ -76,8 +88,22 @@ settings():
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
 # tag(): user.mouse_cursor_commands_enable
 
-# Uncomment the below to disable support for saying numbers without a prefix.
-# By default saying "one" would write "1", however many users find this behavior
-# prone to false positives. If you uncomment this, you will need to say
-# "numb one" to write "1". Note that this tag will eventually be activated by default
-# Using D2 so don't need to say numb anymore
+# Uncomment below enable pop_twice_to_wake
+# Without this tag noise_trigger_pop is usually associated with pop to click actions
+# Enabling this tag disables other pop to click actions in sleep mode, including pop to click
+# tag(): user.pop_twice_to_wake
+
+# Uncomment below enable pop_twice_to_repeat
+# Enabling this tag will repeat the last command when two pops are heard within the allotted time window
+# Without this tag noise_trigger_pop is usually associated with pop to click actions
+# Enabling this tag disables other pop to click actions in command mode, including pop to click
+# tag(): user.pop_twice_to_repeat
+
+# Uncomment the below to enable support for saying numbers without a prefix.
+# By default you need to say "numb one" to write "1". If you uncomment this,
+# you can say "one" to write "1".
+# tag(): user.unprefixed_numbers
+
+# Uncomment the below to enable the experimental window layout commands
+# defined in window_layout.talon
+# tag(): user.experimental_window_layout
