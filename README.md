@@ -217,7 +217,7 @@ Notes:
 
 - If there no hidden files or folders, and the items are displayed in alphabetical order, you can typically issue the `follow <number>`, `file <number>` and `open <number>` commands based on the displayed order.
 
-To implement support for a new program, implement the relevant file manager actions for your application and assert the `user.file_manager` tag. There are a number of example implementations in the repository. [Finder](apps/finder/finder.py) is a good example to copy and mdoify.
+To implement support for a new program, implement the relevant file manager actions for your application and assert the `user.file_manager` tag. There are a number of example implementations in the repository. [Finder](apps/finder/finder.py) is a good example to copy and modify.
 
 ## Terminal commands
 
@@ -282,7 +282,7 @@ Most lists of words are provided as Talon list files, with an extension of `.tal
 
 Some lists with multiple spoken forms/alternatives are instead provided as CSV files. Some are in the `settings` folder and are not created until you launch Talon with `community` installed.
 
-You can customize common Talon list and CSV files with voice commands: say the word `customize` followed by `abbreviations`, `additional words`, `alphabet`, `homophones`, `search engines`, `Unix utilities`, `websites` or `words to replace`. These open the file in a text editor and move the insertion point to the bottom of the file so you can add to it.
+You can customize common Talon list and CSV files with voice commands: say the word `customize` followed by `abbreviations`, `additional words`, `alphabet`, `homophones`, `search engines`, `Unix utilities`, `websites`, `words to replace`, `contacts json` or `contacts csv`. These open the file in a text editor and move the insertion point to the bottom of the file so you can add to it.
 
 You can also add words to the vocabulary or replacements (words_to_replace) by using the commands in [edit_vocabulary.talon](core/vocabulary/edit_vocabulary.talon).
 

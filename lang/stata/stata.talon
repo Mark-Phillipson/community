@@ -10,6 +10,7 @@ tag(): user.code_functions_common
 tag(): user.code_libraries
 tag(): user.code_operators_array
 tag(): user.code_operators_assignment
+tag(): user.code_operators_math
 
 settings():
     user.code_private_function_formatter = "SNAKE_CASE"
@@ -22,6 +23,3 @@ state for val: user.code_state_for()
 s s c install: user.code_import()
 
 s s c install <user.code_libraries>: user.code_insert_library(code_libraries, "")
-
-toggle imports: user.code_toggle_libraries()
-toggle packages: user.code_toggle_libraries()
