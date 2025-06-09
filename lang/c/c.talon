@@ -29,11 +29,7 @@ state include: insert("#include ")
 state include system: user.insert_between("#include <", ">")
 state include local: user.insert_between('#include "', '"')
 state type deaf: insert("typedef ")
-state type deaf struct:
-    insert("typedef struct")
-    insert("{\n\n}")
-    edit.up()
-    key('tab')
+state type deaf struct: user.insert_snippet_by_name("typedefStructDeclaration")
 
 # XXX - create a preprocessor tag for these, as they will match cpp, etc
 state define: "#define "
@@ -82,7 +78,7 @@ standard cast to <user.stdint_cast>: "{stdint_cast}"
 <user.c_types>: "{c_types}"
 <user.c_pointers>: "{c_pointers}"
 <user.c_keywords>: "{c_keywords}"
-<user.c_signed>: "{c_signed}"
+<user.c_signed>: "{c_signed} "
 standard <user.stdint_types>: "{stdint_types}"
 int main: user.insert_between("int main(", ")")
 
