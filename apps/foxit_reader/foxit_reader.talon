@@ -4,11 +4,8 @@ tag(): user.tabs
 tag(): user.pages
 
 tab close all: key(ctrl-shift-w)
-<<<<<<< HEAD
 
 [page] rotate right: key("shift-ctrl-keypad_equals")
 [page] rotate left: key("shift-ctrl-keypad_minus")
 
 go back: key(alt-left)
-=======
->>>>>>> main
