@@ -1,5 +1,6 @@
 from talon import Context, actions, settings
 
+from ...core.described_functions import create_described_insert_between
 from ..tags.operators import Operators
 
 ctx = Context()
@@ -42,7 +43,7 @@ ctx.lists["user.code_common_function"] = {
 
 operators = Operators(
     # code_operators_array
-    SUBSCRIPT=lambda: actions.user.insert_between("[", "]"),
+    SUBSCRIPT=create_described_insert_between("[", "]"),
     # code_operators_assignment
     ASSIGNMENT=" = ",
     ASSIGNMENT_ADDITION=" += ",
@@ -106,15 +107,6 @@ class UserActions:
 
     def code_insert_is_not_null():
         actions.auto_insert(" != null")
-
-    def code_state_return():
-        actions.auto_insert("return ")
-
-    def code_break():
-        actions.auto_insert("break;")
-
-    def code_next():
-        actions.auto_insert("continue;")
 
     def code_insert_true():
         actions.auto_insert("true")

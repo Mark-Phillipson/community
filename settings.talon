@@ -81,8 +81,35 @@ settings():
 #     # Set the total number of command history lines to display
 #     user.command_history_size = 50
 
-    # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
-    user.listening_timeout_minutes = 3
+    # Set the time window size for to for pop_twice_to_sleep and pop_twice_to_repeat. By default, the pops must be more than 0.1 seconds apart and less then 0.3 seconds, to reduce false positives
+    user.double_pop_speed_minimum = 0.1
+    user.double_pop_speed_maximum = 0.3
+
+    # Uncomment to add a directory (relative to the Talon user dir) with additional
+    # .snippet files. Changing this setting requires a restart of Talon.
+    # user.snippets_dir = "snippets"
+
+    # Set to the number of spaces to use for each tab when inserting snippets as raw text (without editor support). Set to -1 to insert tabs as tabs, such as in code editors that can expand tabs in pasted or typed text. This setting is provided for applications like web browsers and chat apps that do not understand code formatting.
+    user.snippet_raw_text_spaces_per_tab = 4
+
+#     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
+#     # the clipboard. This is often faster than typing.
+#     # user.paste_to_insert_threshold = 10
+
+#     # Uncomment to enable context-sensitive dictation. This determines how to format
+#     # (capitalize, space) dictation-mode speech by selecting & copying surrounding text
+#     # before inserting. This can be slow and may not work in some applications. You may
+#     # wish to enable this on a per-application basis.
+#     # user.context_sensitive_dictation = true
+
+#     # Choose how to resize windows moved across physical screens (eg. via `snap next`).
+#     # Default is 'proportional', which preserves window size : screen size ratio.
+#     # 'size aware' keeps absolute window size the same, except full-height or
+#     # -width windows are resized to stay full-height/width.
+#     # user.window_snap_screen = "size aware"
+
+#     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
+#     # user.listening_timeout_minutes = 3
 
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
