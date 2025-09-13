@@ -2,6 +2,7 @@ import re
 
 from talon import Context, Module, actions, settings
 
+from ...core.described_functions import create_described_insert_between
 from ..tags.operators import Operators
 
 mod = Module()
@@ -9,18 +10,6 @@ ctx = Context()
 ctx.matches = r"""
 code.language: python
 """
-ctx.lists["user.code_common_function"] = {
-    "enumerate": "enumerate",
-    "integer": "int",
-    "length": "len",
-    "list": "list",
-    "print": "print",
-    "range": "range",
-    "set": "set",
-    "split": "split",
-    "string": "str",
-    "update": "update",
-}
 
 """a set of fields used in python docstrings that will follow the
 reStructuredText format"""
@@ -59,22 +48,6 @@ ctx.lists["user.code_type"] = {
     "callable": "Callable",
     "list": "List",
     "no return": "NoReturn",
-}
-
-ctx.lists["user.code_keyword"] = {
-    "assert": "assert ",
-    "break": "break",
-    "continue": "continue",
-    "class": "class ",
-    "return": "return ",
-    "import": "import ",
-    "null": "None",
-    "none": "None",
-    "pass": "pass",
-    "true": "True",
-    "false": "False",
-    "yield": "yield ",
-    "from": "from ",
 }
 
 exception_list = [
@@ -151,7 +124,7 @@ ctx.lists["user.python_exception"] = {
 
 operators = Operators(
     # code_operators_array
-    SUBSCRIPT=lambda: actions.user.insert_between("[", "]"),
+    SUBSCRIPT=create_described_insert_between("[", "]"),
     # code_operators_assignment
     ASSIGNMENT=" = ",
     ASSIGNMENT_SUBTRACTION=" -= ",
@@ -173,7 +146,7 @@ operators = Operators(
     BITWISE_LEFT_SHIFT=" << ",
     BITWISE_RIGHT_SHIFT=" >> ",
     # code_operators_lambda
-    LAMBDA=lambda: actions.user.insert_between("lambda ", ": "),
+    LAMBDA=create_described_insert_between("lambda ", ": "),
     # code_operators_math
     MATH_SUBTRACT=" - ",
     MATH_ADD=" + ",
@@ -216,12 +189,6 @@ class UserActions:
     def code_insert_is_not_null():
         actions.auto_insert(" is not None")
 
-    def code_state_for():
-        actions.auto_insert("for ")
-
-    def code_state_return():
-        actions.insert("return ")
-
     def code_insert_true():
         actions.auto_insert("True")
 
@@ -263,9 +230,3 @@ class UserActions:
 
     def code_insert_return_type(type: str):
         actions.insert(f" -> {type}")
-
-    def code_break():
-        actions.insert("break")
-
-    def code_next():
-        actions.insert("continue")

@@ -70,9 +70,16 @@
 #     # Set the total number of command history lines to display
 #     user.command_history_size = 50
 
-#     # Uncomment to add a directory (relative to the Talon user dir) with additional
-#     # .snippet files. Changing this setting requires a restart of Talon.
-#     # user.snippets_dir = "snippets"
+    # Set the time window size for to for pop_twice_to_sleep and pop_twice_to_repeat. By default, the pops must be more than 0.1 seconds apart and less then 0.3 seconds, to reduce false positives
+    user.double_pop_speed_minimum = 0.1
+    user.double_pop_speed_maximum = 0.3
+
+    # Uncomment to add a directory (relative to the Talon user dir) with additional
+    # .snippet files. Changing this setting requires a restart of Talon.
+    # user.snippets_dir = "snippets"
+
+    # Set to the number of spaces to use for each tab when inserting snippets as raw text (without editor support). Set to -1 to insert tabs as tabs, such as in code editors that can expand tabs in pasted or typed text. This setting is provided for applications like web browsers and chat apps that do not understand code formatting.
+    user.snippet_raw_text_spaces_per_tab = 4
 
 #     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
 #     # the clipboard. This is often faster than typing.

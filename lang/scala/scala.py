@@ -1,5 +1,6 @@
 from talon import Context, Module, actions, settings
 
+from ...core.described_functions import create_described_insert_between
 from ..tags.operators import Operators
 
 ctx = Context()
@@ -87,7 +88,7 @@ ctx.lists["user.scala_keyword"] = scala_keywords
 
 operators = Operators(
     # code_operators_array
-    SUBSCRIPT=lambda: actions.user.insert_between("(", ")"),
+    SUBSCRIPT=create_described_insert_between("(", ")"),
     # code_operators_assignment
     ASSIGNMENT=" = ",
     ASSIGNMENT_ADDITION=" += ",
@@ -146,20 +147,11 @@ class UserActions:
     def code_insert_is_not_null():
         actions.insert(" != null")
 
-    def code_break():
-        actions.insert("break")
-
-    def code_next():
-        actions.insert("continue")
-
     def code_insert_true():
         actions.insert("true")
 
     def code_insert_false():
         actions.insert("false")
-
-    def code_state_return():
-        actions.insert("return ")
 
     def code_comment_block_prefix():
         actions.insert("/*")

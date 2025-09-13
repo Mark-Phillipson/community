@@ -2,6 +2,7 @@ from typing import Any, Callable, TypeVar
 
 from talon import Context, Module, actions, settings
 
+from ...core.described_functions import create_described_insert_between
 from ..tags.operators import Operators
 
 mod = Module()
@@ -225,7 +226,7 @@ ctx.lists["user.code_trait"] = all_traits
 
 operators = Operators(
     # code_operators_array
-    SUBSCRIPT=lambda: actions.user.insert_between("[", "]"),
+    SUBSCRIPT=create_described_insert_between("[", "]"),
     # code_operators_assignment
     ASSIGNMENT=" = ",
     ASSIGNMENT_ADDITION=" += ",
@@ -250,7 +251,7 @@ operators = Operators(
     MATH_MULTIPLY=" * ",
     MATH_DIVIDE=" / ",
     MATH_MODULO=" % ",
-    MATH_EXPONENT=lambda: actions.user.insert_between(".pow(", ")"),
+    MATH_EXPONENT=create_described_insert_between(".pow(", ")"),
     MATH_EQUAL=" == ",
     MATH_NOT_EQUAL=" != ",
     MATH_GREATER_THAN=" > ",
@@ -271,47 +272,7 @@ class UserActions:
     def code_get_operators() -> Operators:
         return operators
 
-    # tag: comment_line
-
-    def code_comment_line_prefix():
-        actions.user.insert_snippet_by_name("commentLine")
-
-    # tag: comment_documentation
-
-    def code_comment_documentation():
-        actions.user.insert_snippet_by_name("commentDocumentation")
-
     # tag: imperative
-
-    def code_state_if():
-        actions.user.insert_snippet_by_name("ifStatement")
-
-    def code_state_else_if():
-        actions.user.insert_snippet_by_name("elseIfStatement")
-
-    def code_state_else():
-        actions.user.insert_snippet_by_name("elseStatement")
-
-    def code_state_switch():
-        actions.user.insert_snippet_by_name("switchStatement")
-
-    def code_state_for():
-        actions.user.insert_snippet_by_name("forLoopStatement")
-
-    def code_state_while():
-        actions.user.insert_snippet_by_name("whileLoopStatement")
-
-    def code_state_infinite_loop():
-        actions.user.insert_snippet_by_name("infiniteLoopStatement")
-
-    def code_state_return():
-        actions.auto_insert("return ")
-
-    def code_break():
-        actions.auto_insert("break;")
-
-    def code_next():
-        actions.auto_insert("continue;")
 
     # tag: object_oriented
 
@@ -378,9 +339,6 @@ class UserActions:
         code_insert_function_or_macro(text, selection, "(", ")")
 
     # tag: libraries
-
-    def code_import():
-        actions.user.insert_snippet_by_name("importStatement")
 
     def code_insert_library(text: str, selection: str):
         actions.user.insert_snippet_by_name("importStatement", {"0": text})
