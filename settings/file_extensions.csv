@@ -46,3 +46,5 @@ File extension,Name
 .java,dot java
 .class,dot class
 .log,dot log
+.razor,dot razor
+.cshtml,dot cs HTML

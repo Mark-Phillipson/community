@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "email": "rach_phillipson@live.co.uk",
+    "full_name": "Rachel Phillipson",
+    "nicknames": ["Rachel", "Ratch"]
+  },
+  {
+    "email": "sg@packtex.com", 
+    "full_name": "Suleman Gaffer",
+    "nicknames": ["Suleman"]
+  },
+  {
+    "email": "david@axxonlab.com",
+    "full_name": "David Mitch",
+    "nicknames": ["David"]
+  }
+]
