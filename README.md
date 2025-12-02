@@ -118,7 +118,7 @@ Formatters allow you to insert words with consistent capitalization and punctuat
 Try using a formatter by saying `snake hello world`. This inserts "hello_world".
 
 Multiple formatters can be chained together — for example, `dubstring snake hello world` inserts "hello_world".
-
+Control map
 Prose formatters (marked with \* in the help window) preserve hyphens and apostrophes. Non-prose (code) formatters strip punctuation instead, for example to generate a valid variable name. `title how's it going` inserts "How's It Going"; `hammer how's it going` inserts "HowsItGoing".
 
 Reformat existing text with one or more formatters by selecting it, then saying the formatter name(s) followed by `that`. Say `help reformat` to display how each formatter reformats `one_two_three`.
