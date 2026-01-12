@@ -2,10 +2,6 @@ list: user.website
 -
 
 talon home page: http://talonvoice.com
-talon slack: http://talonvoice.slack.com/messages/help
-talon wiki: https://talon.wiki/
-talon practice: https://chaosparrot.github.io/talon_practice/
-talon repository search: https://search.talonvoice.com/search/
 amazon: https://www.amazon.com/
 google search: https://www.google.com/
 google calendar: https://calendar.google.com
@@ -16,7 +12,7 @@ github: https://github.com/
 gist: https://gist.github.com/
 wikipedia: https://en.wikipedia.org/
 youtube: https://www.youtube.com/
-amazon music: https://music.amazon.com/
+music: https://music.amazon.co.uk/my/library
 spotify: https://www.spotify.com/
 netflix: https://www.netflix.com/
 BBC: https://www.bbc.com/
