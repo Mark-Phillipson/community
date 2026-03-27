@@ -14,8 +14,8 @@ settings():
     #     # If `true`, automatically show the picker GUI when the file manager has focus
     #     user.file_manager_auto_show_pickers = false
 
-    # Uncomment to always sort help contexts alphabetically.
-    # user.help_sort_contexts_by_specificity = false
+    #     # Uncomment to always sort help contexts alphabetically.
+    #     # user.help_sort_contexts_by_specificity = false
 
     # Set the scroll amount for continuous scroll/gaze scroll
     user.mouse_continuous_scroll_amount = 10
@@ -111,9 +111,9 @@ settings():
 #     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
 #     # user.listening_timeout_minutes = 3
 
-# Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
-# See issue #688 for more detail: https://github.com/talonhub/community/issues/688
-# tag(): user.mouse_cursor_commands_enable
+# # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
+# # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
+# # tag(): user.mouse_cursor_commands_enable
 
 # Uncomment below enable pop_twice_to_wake
 # Without this tag noise_trigger_pop is usually associated with pop to click actions
