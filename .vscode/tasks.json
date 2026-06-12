@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "generate talon capture cheat sheet",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/extract_talon_captures.py",
+        "--output",
+        "C:/Users/MPhil/Documents/Talon/Talon-Capture-Cheat-Sheet.md"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

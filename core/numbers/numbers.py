@@ -283,7 +283,7 @@ def number_prose_unprefixed(m) -> str:
     return m[0]
 
 
-@mod.capture(rule="(numb | numeral) <user.number_prose_unprefixed>")
+@mod.capture(rule="(numb | numeral | hash) <user.number_prose_unprefixed>")
 def number_prose_prefixed(m) -> str:
     return m.number_prose_unprefixed
 
