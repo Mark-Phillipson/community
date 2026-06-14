@@ -111,9 +111,15 @@ settings():
 #     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
 #     # user.listening_timeout_minutes = 3
 
-# # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
-# # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
-# # tag(): user.mouse_cursor_commands_enable
+#     # Time in seconds to wait for the clipboard to change when trying to get selected text
+#     # user.selected_text_timeout = 0.25
+
+    # Time in seconds to sleep after inserting text with `insert_between` (e.g. when using paired delimiters like 'box' or 'round'), before moving the cursor back. Useful to set on a per-application basis, to prevent moving the moving the cursor before text is inserted.
+    # user.insert_between_wait = 0
+
+# Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
+# See issue #688 for more detail: https://github.com/talonhub/community/issues/688
+# tag(): user.mouse_cursor_commands_enable
 
 # Uncomment below enable pop_twice_to_wake
 # Without this tag noise_trigger_pop is usually associated with pop to click actions
