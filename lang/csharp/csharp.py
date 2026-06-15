@@ -7,6 +7,7 @@ mod = Module()
 ctx = Context()
 ctx.matches = r"""
 code.language: csharp
+code.language: aspnetcorerazor
 """
 ctx.lists["user.code_common_function"] = {
     "integer": "int.TryParse",
