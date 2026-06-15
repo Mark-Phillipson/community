@@ -1,4 +1,5 @@
-from typing import Any, Callable, TypeVar
+from collections.abc import Callable
+from typing import Any, TypeVar
 
 from talon import Context, Module, actions, settings
 
@@ -389,5 +390,5 @@ RT = TypeVar("RT")  # return type
 
 
 def repeat_call(n: int, f: Callable[..., RT], *args: Any, **kwargs: Any):
-    for i in range(n):
+    for _ in range(n):
         f(*args, **kwargs)
