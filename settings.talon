@@ -48,8 +48,14 @@
 #     # Set the amount to scroll up/down
 #     user.mouse_wheel_down_amount = 120
 
-#     # Set the amount to scroll left/right
-#     user.mouse_wheel_horizontal_amount = 40
+    # Set the amount to scroll left/right
+    user.mouse_wheel_horizontal_amount = 40
+
+    # Set the duration to hold mouse clicks in milliseconds. 0 means no hold.
+    # In some full-screen applications, particularly games, mouse clicks may not
+    # be recognized unless held for a short duration.  If this occurs, try
+    # starting with a setting of 16.
+    user.mouse_click_hold = 0
 
     # If `true`, start mouse grid numbering on the bottom left (vs. top left)
     user.grids_put_one_bottom_left = true
@@ -67,9 +73,12 @@
     # .snippet files. Changing this setting requires a restart of Talon.
     # user.snippets_dir = "snippets"
 
-#     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
-#     # the clipboard. This is often faster than typing.
-#     # user.paste_to_insert_threshold = 10
+    # Set to the number of spaces to use for each tab when inserting snippets as raw text (without editor support). Set to -1 to insert tabs as tabs, such as in code editors that can expand tabs in pasted or typed text. This setting is provided for applications like web browsers and chat apps that do not understand code formatting.
+    user.snippet_raw_text_spaces_per_tab = 4
+
+    # Uncomment to insert text longer than 10 characters (customizable) by pasting from
+    # the clipboard. This is often faster than typing.
+    # user.paste_to_insert_threshold = 10
 
 #     # Uncomment to enable context-sensitive dictation. This determines how to format
 #     # (capitalize, space) dictation-mode speech by selecting & copying surrounding text
@@ -94,6 +103,9 @@
 
     # Time in seconds to sleep after inserting text with `insert_between` (e.g. when using paired delimiters like 'box' or 'round'), before moving the cursor back. Useful to set on a per-application basis, to prevent moving the moving the cursor before text is inserted.
     # user.insert_between_wait = 0
+
+    # If deprecated commands should throw an exception, which stops the commands from running. You might find this helps you learn the new replacement commands faster.
+    # user.strict_command_deprecation = true
 
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
