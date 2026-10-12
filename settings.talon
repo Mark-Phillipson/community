@@ -105,11 +105,14 @@ settings():
 #     # wish to enable this on a per-application basis.
 #     # user.context_sensitive_dictation = true
 
-#     # Choose how to resize windows moved across physical screens (eg. via `snap next`).
-#     # Default is 'proportional', which preserves window size : screen size ratio.
-#     # 'size aware' keeps absolute window size the same, except full-height or
-#     # -width windows are resized to stay full-height/width.
-#     # user.window_snap_screen = "size aware"
+    # Choose how to resize windows moved across physical screens (eg. via `snap next`).
+    # Default is 'proportional', which preserves window size : screen size ratio.
+    # 'size aware' keeps absolute window size the same, except full-height or
+    # -width windows are resized to stay full-height/width.
+    # user.window_snap_screen = "size aware"
+
+    # Mode enabled on Talon launch (command by default; dictation, mixed or sleep are other options)
+    # user.initial_mode = "sleep"
 
 #     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
 #     # user.listening_timeout_minutes = 3
