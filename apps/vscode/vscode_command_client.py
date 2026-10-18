@@ -45,6 +45,7 @@ class Actions:
     def vscode(command_id: str):
         """Execute command via vscode command server, if available, or fallback
         to command palette."""
+        print(f"Executing VSCode command: {command_id}")
         command_server_or_client_fallback(command_id, False)
 
     def vscode_and_wait(command_id: str):
@@ -52,6 +53,7 @@ class Actions:
         for command to finish.  If command server not available, uses command
         palette and doesn't guarantee that it will wait for command to
         finish."""
+        print(f"Executing VSCode command and waiting: {command_id}")
         command_server_or_client_fallback(command_id, True)
 
     # These commands are shims, to provide backwards compatibility, they may be removed in the fuuture.
