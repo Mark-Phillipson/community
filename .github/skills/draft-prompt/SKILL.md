@@ -1,3 +1,8 @@
+---
+name: draft-prompt
+description: draft-prompt
+disable-model-invocation: true
+---
 Please can you investigate if there is a voice command in this repository to list all the emotion icons.
 
  there is definitely a voice command like the following:
