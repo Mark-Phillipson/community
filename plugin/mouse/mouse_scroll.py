@@ -225,7 +225,7 @@ mod.tag(
 )
 
 
-@imgui.open(x=1700, y=0)
+@imgui.open(x=1, y=1)
 def gui_wheel(gui: imgui.GUI):
     gui.text(f"Scroll mode: {scrolling_state.get_scrolling_mode_description()}")
     gui.text("say a number between 0 and 99 to set scrolling speed")
