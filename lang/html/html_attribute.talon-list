@@ -24,5 +24,6 @@ source: src
 style
 tab index: tabindex
 target
+title
 type
 value
