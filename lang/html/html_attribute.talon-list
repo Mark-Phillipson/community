@@ -20,6 +20,7 @@ rel
 required
 role
 row span: rowspan
+selected
 source: src
 style
 tab index: tabindex
