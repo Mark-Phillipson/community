@@ -15,6 +15,8 @@ _file_extensions_defaults = {
     "dot vim": ".vim",
     "dot see": ".c",
     "dot see sharp": ".cs",
+    "dot cs html": ".cshtml",
+    "dot Razor": ".razor",
     "dot exe": ".exe",
     "dot bin": ".bin",
     "dot bend": ".bin",
