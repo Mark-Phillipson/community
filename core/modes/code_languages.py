@@ -61,7 +61,7 @@ code_languages = [
     # These languages doesn't actually have a language mode, but we do have snippets.
     Language("cpp", "see plus plus", ["cpp", "hpp"]),
     Language("csv", "csv", ["csv"]),
-    Language("html", "html", ["html"]),
+    Language("html", "html", ["html", "razor", "cshtml"]),
     Language("json", "json", ["json"]),
     Language("shellscript", "shell script", ["sh"]),
     Language("xml", "xml", ["xml"]),
