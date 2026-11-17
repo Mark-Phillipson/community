@@ -1,5 +1,4 @@
 code.language: csharp
-code.language: aspnetcorerazor
 -
 
 tag(): user.code_imperative

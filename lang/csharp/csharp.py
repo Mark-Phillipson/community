@@ -7,7 +7,6 @@ mod = Module()
 ctx = Context()
 ctx.matches = r"""
 code.language: csharp
-code.language: aspnetcorerazor
 """
 
 
