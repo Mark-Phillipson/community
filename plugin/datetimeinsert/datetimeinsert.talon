@@ -24,14 +24,20 @@ timestamp insert UTC: insert(user.time_format_utc("%Y-%m-%d %H:%M:%S"))
 timestamp insert UTC high resolution:
     insert(user.time_format_utc("%Y-%m-%d %H:%M:%S.%f"))
 
-# Date entry commands using day, month, year captures.
-# <user.day> comes from plugin/datetimeinsert/date_lists.py and accepts 1-31.
-# <user.month> comes from plugin/datetimeinsert/date_lists.py and accepts month names/abbreviations and 1-12.
-# <number> is the shared core number capture from core/numbers/numbers.py and is used here as the year.
+# Date entry commands using day, month, year lists
 
-# Insert date using the configured default format from settings.
-# Example command: 'date 31 January 2026'
-date <user.day> <user.month> <number>: user.insert_date_from_parts(day, month, number)
+# Insert date using preferred mode from settings
+^date <number_small> {user.month} <number>$:
+    user.insert_date_from_parts(number_small, month, number)
+
+# Insert date as US format mm/dd/yyyy
+# (defaults remains dd/mm/yyyy for standard use)
+^date <number_small> {user.month} <number> us$:
+    user.insert_date_formatted_us(number_small, month, number)
+
+# Insert date as ISO format yyyy-mm-dd
+^date <number_small> {user.month} <number> iso$:
+    user.insert_date_formatted_iso(number_small, month, number)
 
 # Relative date commands
 # Today/now uses the configured default format from settings.
@@ -58,7 +64,6 @@ date last year: user.insert_date_relative(0, 0, -1)
 date first of [the] month: user.insert_date_first_of_month()
 date last day of [the] month: user.insert_date_last_day_of_month()
 
-# Weekday examples: 'date next Wednesday' or 'date last Wednesday'.
-# <user.weekday> comes from plugin/datetimeinsert/date_lists.py and accepts Monday through Sunday.
-date next <user.weekday>: user.insert_date_next_weekday(weekday)
-date last <user.weekday>: user.insert_date_last_weekday(weekday)
+# Next weekday
+# (weekday list defined in weekdays.talon-list)
+^date next {user.weekday}$: user.insert_date_next_weekday(weekday)
