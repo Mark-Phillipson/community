@@ -1,5 +1,5 @@
 list: user.code_common_method
-code.language: csharp | aspnetcorerazor
+code.language: csharp
 -
 
 add: Add

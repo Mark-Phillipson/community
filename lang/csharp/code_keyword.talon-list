@@ -1,6 +1,5 @@
 list: user.code_keyword
 code.language: csharp
-code.language: aspnetcorerazor
 -
 
 abstract: "abstract "
