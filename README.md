@@ -277,9 +277,29 @@ The most commonly adjusted settings are probably
 
 ## Customizing words and lists
 
-Most lists of words are provided as Talon list files, with an extension of `.talon-list`. Read about the syntax of these files [on the Talon wiki](https://talon.wiki/Customization/talon_lists).
+Talon uses **lists** and **captures** to make voice commands flexible, so a command can accept more than one fixed phrase or include variable spoken input.
+
+### Lists
+
+A list is a named collection of spoken forms, usually mapped to values. It is useful when a command should accept one choice from a known set, such as letters, keys, applications, or programming-language terms. In a command rule, a list is referenced with curly braces, for example `{user.letter}`. The spoken form is matched against the entries in that list, and the corresponding value is made available to the command.
+
+Most lists of words are provided as Talon list files, with an extension of `.talon-list`. These files make lists easier to define and customize without needing to write Python. Read about [Talon list syntax](https://talon.wiki/Customization/talon_lists) on the Talon wiki.
 
 Some lists with multiple spoken forms/alternatives are instead provided as CSV files. Some are in the `settings` folder and are not created until you launch Talon with `community` installed.
+
+### Captures
+
+A capture describes a spoken-input rule. It can combine ordinary words, alternatives, optional parts, lists, and other captures to recognize a more flexible phrase and provide the matched value to the command. Captures are referenced with angle brackets, for example `<number>`.
+
+For example:
+
+```talon
+move mouse down <number>: mouse_nudge(0, number)
+```
+
+You can say `move mouse down five` or `move mouse down ten`. The `<number>` capture recognizes the spoken number and makes its numeric value available to the command, so one command can handle many possible values instead of needing a separate command for each number.
+
+In short, **lists provide the choices a user can say; captures describe how spoken input is matched and interpreted**. A capture can use one or more lists as part of its rule. See the [official Talon documentation on lists and captures](https://talonvoice.com/docs/reference/guide.language.html#using-lists-and-captures) for more examples.
 
 You can customize common Talon list and CSV files with voice commands: say the word `customize` followed by `abbreviations`, `additional words`, `alphabet`, `homophones`, `search engines`, `Unix utilities`, `websites`, `words to replace`, `contacts json` or `contacts csv`. These open the file in a text editor and move the insertion point to the bottom of the file so you can add to it.
 
