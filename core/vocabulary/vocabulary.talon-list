@@ -2,8 +2,8 @@ list: user.vocabulary
 -
 
 N map: nmap
-under documented: under-documented
 nmap
+under documented: under-documented
 admin
 Cisco
 Citrix
@@ -11,7 +11,6 @@ VPN
 DNS
 Minecraft
 HTML
-Radzen
 blazer: Blazor
 Talon
 Python
@@ -34,7 +33,7 @@ Tonbridge
 seven oaks: Sevenoaks
 Tunbridge Wells
 Ashford
-sitting bon: Sittingbourne
+sitting born: Sittingbourne
 Margate
 Midweakers
 Iran
@@ -42,3 +41,4 @@ Ollama
 sea sharp: CSharp
 azure: Azure
 weekers
+halling born: Hollingbourne
